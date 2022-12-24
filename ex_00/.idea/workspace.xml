@@ -9,39 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c08233a-c4f8-4f56-8f1b-0b40ba84bbd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/MovieSessionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/MovieSessionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/params/MovieSessionParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/utils/TimeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/listeners/ApplicationContextListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/MovieSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Schema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieSessionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieSessionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_add.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_list.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MovieSessionMapperTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/ApplicationContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/ApplicationContextConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/PersistenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/PersistenceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/WebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/WebAppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/DefaultPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/DefaultPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/MovieHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/MovieHall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieHallRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieHallRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieHallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieHallService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cinema.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cinema.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/admin_panel_navigation.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/admin_panel_navigation.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_add.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_list.ftl" afterDir="false" />
-    </list>
+    <list default="true" id="2c08233a-c4f8-4f56-8f1b-0b40ba84bbd6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -229,7 +197,7 @@
       <workItem from="1670480509331" duration="5223000" />
       <workItem from="1670575396075" duration="30010000" />
       <workItem from="1670759959851" duration="13009000" />
-      <workItem from="1671613738049" duration="44753000" />
+      <workItem from="1671613738049" duration="45306000" />
     </task>
     <servers />
   </component>
