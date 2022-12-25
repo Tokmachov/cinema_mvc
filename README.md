@@ -25,7 +25,7 @@
 6. Run deploy script with 2 parameters: 1 - app dir 2 - apache dir<br>
   &emsp;./deploy_cinema.sh /app_dir /apache dir<br>
 <br>
-  &emsp;7 app starting page is accessible at http://localhost:8080/cinema/admin/panel<br>
+7. app starting page is accessible at http://localhost:8080/cinema/admin/panel<br>
 <br>
 8. When app is no longer needed run shutdown script with 1 parameter: tomcat dir<br>
   &emsp;./shutdown_cinema.sh /tomcat_dir<br>
