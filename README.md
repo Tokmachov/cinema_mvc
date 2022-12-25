@@ -1,5 +1,5 @@
-1 install maven
-2 Download tamcat
+1 install maven<br>
+2 Download tamcat<br>
 curl http://archive.apache.org/dist/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.zip --output tomcat.zip<br>
 3 unarchive tomcat<br>
 unzip tomcat.zip<br>
