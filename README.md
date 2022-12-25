@@ -1,15 +1,15 @@
 1 install maven<br>
 <br>
 2 Download tamcat<br>
-curl http://archive.apache.org/dist/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.zip --output tomcat.zip<br>
+    &emsp;curl http://archive.apache.org/dist/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.zip --output tomcat.zip<br>
 <br>
 3 unarchive tomcat<br>
-unzip tomcat.zip<br>
+    &emsp;unzip tomcat.zip<br>
 <br>
 4 assign rights to deployment and shutdown scritps<br>
-cd to cinema dir<br>
-chmod 777 deploy_cinema.sh<br>
-chmod 777 shutdown_cinema.sh<br>
+    &emsp;cd to cinema dir<br>
+    &emsp;chmod 777 deploy_cinema.sh<br>
+    &emsp;chmod 777 shutdown_cinema.sh<br>
 <br>
 5 configure application before deployment<br>
 For that find cinema.properties in app directory and edit it.<br>
