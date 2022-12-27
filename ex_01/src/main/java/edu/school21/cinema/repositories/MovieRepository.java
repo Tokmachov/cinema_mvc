@@ -21,4 +21,13 @@ public class MovieRepository {
     public List<Movie> findAll() {
         return em.createQuery("select movie from Movie movie", Movie.class).getResultList();
     }
+
+    public Movie findById(String id) {
+        return em.find(Movie.class, id);
+    }
+
+    public void deleteById(String id) {
+        Movie movie = em.find(Movie.class, id);
+        em.remove(movie);
+    }
 }

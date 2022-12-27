@@ -12,6 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 public class DefaultPageController {
     @GetMapping
     public RedirectView displayAdminPanelNavigation(HttpServletRequest request) {
-        return new RedirectView(request.getContextPath() + "/" + AdminPanelController.ADMIN_PANEL_NAVIGATION_PATH);
+        return new RedirectView(request.getContextPath() + "/" + AdminPanelController.ADMIN_PANEL_NAVIGATION_URL);
     }
 }

@@ -22,13 +22,20 @@ public class MovieHallRepository {
     public List<MovieHall> findAll() {
         return em.createQuery("select movieHall from MovieHall movieHall", MovieHall.class).getResultList();
     }
+
     public void deleteById(String id) {
         MovieHall movieHall = em.find(MovieHall.class, id);
         em.remove(movieHall);
     }
+
     public void deleteByIdList(List<String> idList) {
-        Query q = em.createQuery("delete from MovieHall movieHall where movieHall.id in (?1)");
-        q.setParameter(1, idList);
-        q.executeUpdate();
+        for (String id : idList) {
+            MovieHall movieHall = em.find(MovieHall.class, id);
+            em.remove(movieHall);
+        }
+    }
+
+    public MovieHall findById(String id) {
+        return em.find(MovieHall.class, id);
     }
 }

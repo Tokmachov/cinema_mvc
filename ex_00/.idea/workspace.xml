@@ -10,10 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c08233a-c4f8-4f56-8f1b-0b40ba84bbd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/deploy_cinema.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shutdown_cinema.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/MovieSessionSearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shutdown_cinema.sh" beforeDir="false" afterPath="$PROJECT_DIR$/shutdown_cinema.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +27,7 @@
         <option value="Jsp File" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -55,6 +57,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -202,7 +205,7 @@
       <workItem from="1670480509331" duration="5223000" />
       <workItem from="1670575396075" duration="30010000" />
       <workItem from="1670759959851" duration="13009000" />
-      <workItem from="1671613738049" duration="48392000" />
+      <workItem from="1671613738049" duration="51321000" />
     </task>
     <servers />
   </component>

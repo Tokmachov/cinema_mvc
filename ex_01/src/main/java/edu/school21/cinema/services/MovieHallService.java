@@ -17,7 +17,7 @@ public class MovieHallService {
         this.movieHallRepository = movieHallRepository;
     }
 
-    public List<MovieHall> get() {
+    public List<MovieHall> findAll() {
         return movieHallRepository.findAll();
     }
 
