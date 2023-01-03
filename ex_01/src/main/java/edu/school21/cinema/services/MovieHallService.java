@@ -21,8 +21,8 @@ public class MovieHallService {
         return movieHallRepository.findAll();
     }
 
-    public void add(MovieHall movieHall) {
-        movieHallRepository.save(movieHall);
+    public MovieHall save(MovieHall movieHall) {
+        return movieHallRepository.save(movieHall);
     }
 
     public void deleteById(String id) {

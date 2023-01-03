@@ -14,8 +14,11 @@ import java.util.List;
 @Entity
 @Table(name = "movie", schema = Schema.SCHEMA)
 public class Movie {
+
     @Id
-    @Column(name = "title", length = Constants.MOVIE_TITLE_MAX_LENGTH)
+    private String id;
+
+    @Column(name = "title", length = Constants.MOVIE_TITLE_MAX_LENGTH, unique = true)
     private String title;
 
     private int yearCreated;
@@ -33,6 +36,7 @@ public class Movie {
     private List<MovieSession> movieSessionList = new ArrayList<>();
 
     public Movie(String title, int yearCreated, int ageRestriction, String description, String posterId) {
+        this.id = title.replace(" ", "%20");
         this.title = title;
         this.yearCreated = yearCreated;
         this.ageRestriction = ageRestriction;

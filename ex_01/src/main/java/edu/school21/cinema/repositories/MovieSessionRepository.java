@@ -24,9 +24,19 @@ public class MovieSessionRepository {
         return em.createQuery("select movieSession from MovieSession movieSession", MovieSession.class).getResultList();
     }
 
+    public List<MovieSession> findByMovieTitleLike(String query) {
+        TypedQuery<MovieSession> movieSessionTypedQuery = em.createQuery("select movieSession from MovieSession movieSession where lower(movieSession.movie.title) like lower(?1)", MovieSession.class);
+        movieSessionTypedQuery.setParameter(1, query + "%");
+        return movieSessionTypedQuery.getResultList();
+    }
+
     public void deleteByIds(List<Long> idList) {
         Query mq = em.createQuery("delete from MovieSession m where m.id in (?1)");
         mq.setParameter(1, idList);
         mq.executeUpdate();
+    }
+
+    public MovieSession findById(long id) {
+        return em.find(MovieSession.class, id);
     }
 }

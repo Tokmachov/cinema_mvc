@@ -1,6 +1,5 @@
 package edu.school21.cinema.services;
 
-import edu.school21.cinema.config.PersistenceConfig;
 import edu.school21.cinema.models.Movie;
 import edu.school21.cinema.repositories.MovieRepository;
 import lombok.Getter;
@@ -30,10 +29,10 @@ public class MovieService {
         this.movieRepository = movieRepository;
     }
 
-    public void save(Movie movie, InputStream poster) throws IOException {
+    public Movie save(Movie movie, InputStream poster) throws IOException {
         File targetFile = new File(posterPath, movie.getPosterId());
         FileUtils.copyInputStreamToFile(poster, targetFile);
-        movieRepository.save(movie);
+        return movieRepository.save(movie);
     }
 
     public List<Movie> findAll() {
@@ -42,8 +41,8 @@ public class MovieService {
 
     public void deleteByMovieTitleList(List<String> movieTileList) {
         for (String movieTitle : movieTileList) {
-            Movie movie = movieRepository.findById(movieTitle);
-            movieRepository.deleteById(movieTitle);
+            Movie movie = movieRepository.findByTitle(movieTitle);
+            movieRepository.deleteByTitle(movieTitle);
             deletePoster(movie.getPosterId());
         }
     }
@@ -62,5 +61,8 @@ public class MovieService {
         } catch (Exception e) {
             System.err.println("Failed to delete poster directory: " + e.toString());
         }
+    }
+    public Movie findByTitle(String title) {
+        return movieRepository.findByTitle(title);
     }
 }

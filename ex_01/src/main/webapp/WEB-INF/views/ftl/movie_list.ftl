@@ -4,7 +4,10 @@
 <head>
     <style>
         div.gallery {
+            margin: 5px;
             border: 1px solid #ccc;
+            float: left;
+            width: 180px;
         }
 
         div.gallery:hover {
@@ -19,29 +22,7 @@
         div.desc {
             padding: 15px;
             text-align: center;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .responsive {
-            padding: 0 6px;
-            float: left;
-            width: 24.99999%;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .responsive {
-                width: 49.99999%;
-                margin: 6px 0;
-            }
-        }
-
-        @media only screen and (max-width: 500px) {
-            .responsive {
-                width: 100%;
-            }
+            word-break: break-all;
         }
 
         .clearfix:after {
@@ -50,7 +31,6 @@
             clear: both;
         }
     </style>
-
 </head>
 
 <body>
@@ -59,15 +39,13 @@
     <br>
     <form method="post">
         <#list movieListModelKey as movie>
-            <div class="responsive">
-                <div class="gallery">
-                    <a target="_blank" href="movies/poster/${movie.posterId}">
-                        <img src="movies/poster/${movie.posterId}" alt="poster for movie ${movie.title}" width="3000" height="3000">
-                    </a>
-                    <div class="desc">${movie.title}</div>
-                    <div class="desc">${movie.description}</div>
-                    <div class="desc"><input type="checkbox" name="movieIdList" value="${movie.title}"></div>
-                </div>
+            <div class="gallery">
+                <img src="${moviePosterBaseUrlKey}/${movie.posterId}" alt="poster for movie ${movie.title}" width="600" height="400">
+                <div class="desc">${movie.title}</div>
+                <div class="desc">year: ${movie.yearCreated}</div>
+                <div class="desc">age restriction: ${movie.ageRestriction}</div>
+                <div class="desc">${movie.description}</div>
+                <div class="desc"><input type="checkbox" name="movieIdList" value="${movie.title}"></div>
             </div>
         </#list>
 

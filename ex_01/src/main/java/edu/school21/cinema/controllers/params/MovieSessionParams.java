@@ -12,5 +12,5 @@ import lombok.Setter;
 public class MovieSessionParams {
     private String dateAndTime;
     private String movieHallId;
-    private String movieId;
+    private String movieTitle;
 }

@@ -25,11 +25,11 @@ import java.util.Properties;
 @PropertySource("classpath:cinema.properties")
 public class PersistenceConfig {
 
-    @Value("${embedded_db:true}")
+    @Value("${db.embedded:true}")
     private boolean isEmbeddedDb;
 
     @Getter
-    @Value("${private boolean poster.delete_posters_after_shutdown:true}")
+    @Value("${poster.delete_posters_after_shutdown:true}")
     private boolean deletePostersAfterShutdown;
 
     @Value("${db.driver}")
@@ -43,6 +43,9 @@ public class PersistenceConfig {
 
     @Value("${db.user.password}")
     private String userPassword;
+
+    @Value("${db.hibernate.hbm2ddl.auto:update}")
+    private String automaticSchemaUpdate;
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
@@ -83,22 +86,9 @@ public class PersistenceConfig {
                 .build();
     }
 
-    @Bean
-    public PlatformTransactionManager transactionManager() {
-        JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
-
-        return transactionManager;
-    }
-
-    @Bean
-    public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
-        return new PersistenceExceptionTranslationPostProcessor();
-    }
-
     Properties additionalProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.auto", "update");
+        properties.setProperty("hibernate.hbm2ddl.auto", automaticSchemaUpdate);
         String dialect = isEmbeddedDb ? "org.hibernate.dialect.H2Dialect" : "org.hibernate.dialect.PostgreSQLDialect";
         properties.setProperty("hibernate.dialect", dialect);
         properties.setProperty("javax.persistence.create-database-schemas", "true");
@@ -106,5 +96,17 @@ public class PersistenceConfig {
         properties.setProperty("hibernate.use_sql_comments", "true");
         properties.setProperty("hibernate.show_sql", "true");
         return properties;
+    }
+
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
+        return transactionManager;
+    }
+
+    @Bean
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
+        return new PersistenceExceptionTranslationPostProcessor();
     }
 }

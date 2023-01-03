@@ -10,11 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c08233a-c4f8-4f56-8f1b-0b40ba84bbd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ex_00/src/main/java/edu/school21/cinema/controllers/MovieSessionSearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex_00/src/main/webapp/WEB-INF/views/ftl/movie_session_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex_00/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex_00/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex_00/shutdown_cinema.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../ex_00/shutdown_cinema.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex_00/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ex_00/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/MovieSessionDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/SearchMovieSessionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/TestDataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Main in the moon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man in iron mask" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man in love" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man of god" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man of steel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Men in black" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Moonrise kingdom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/css/movie_session_search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/js/movie_session_search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_search.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/session_page.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/ApplicationContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/ApplicationContextConfig.java" afterDir="false" />
@@ -22,16 +32,21 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/WebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/WebAppInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/DefaultPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/DefaultPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/MovieSessionSearchController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/MovieSessionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/MovieSessionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/params/MovieSessionParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/params/MovieSessionParams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/MovieHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/MovieHall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieHallRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieHallRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieSessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieSessionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieHallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieHallService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieSessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieSessionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/cinema.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cinema.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/admin_panel_navigation.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/admin_panel_navigation.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_add.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_add.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/html/movie_session_search.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +60,8 @@
         <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -79,7 +96,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -91,12 +109,21 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/html" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.school21.cinema.controllers.dto" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.11">
@@ -223,7 +250,11 @@
       <workItem from="1670575396075" duration="30010000" />
       <workItem from="1670759959851" duration="13009000" />
       <workItem from="1671613738049" duration="51321000" />
-      <workItem from="1672156474733" duration="302000" />
+      <workItem from="1672156474733" duration="6808000" />
+      <workItem from="1672229403127" duration="6430000" />
+      <workItem from="1672253979623" duration="15786000" />
+      <workItem from="1672328721743" duration="223000" />
+      <workItem from="1672330099910" duration="39125000" />
     </task>
     <servers />
   </component>
@@ -254,26 +285,6 @@
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.21/spring-web-5.3.21.jar!/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.class</url>
           <line>158</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.21/spring-web-5.3.21.jar!/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.class</url>
-          <line>178</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.21/spring-web-5.3.21.jar!/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.class</url>
-          <line>205</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.21/spring-web-5.3.21.jar!/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.class</url>
-          <line>123</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.21/spring-web-5.3.21.jar!/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.class</url>
-          <line>108</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.21/spring-web-5.3.21.jar!/org/springframework/http/converter/json/AbstractJackson2HttpMessageConverter.class</url>
@@ -345,6 +356,37 @@
           <line>9</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.3.21/spring-webmvc-5.3.21.jar!/org/springframework/web/servlet/view/InternalResourceViewResolver.class</url>
+          <line>43</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.3.21/spring-webmvc-5.3.21.jar!/org/springframework/web/servlet/view/InternalResourceViewResolver.class</url>
+          <line>39</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.3.21/spring-webmvc-5.3.21.jar!/org/springframework/web/servlet/mvc/method/annotation/AbstractMessageConverterMethodArgumentResolver.class</url>
+          <line>76</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/school21/cinema/listeners/ApplicationContextListener.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="posterId.equals(&quot;392cdfe4-765b-4e8d-a516-e5f8b4d72682&quot;)" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java</url>
+          <line>220</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/TestDataService.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="org.springframework.web.HttpMediaTypeNotSupportedException" package="org.springframework.web" />
           <option name="timeStamp" value="28" />
@@ -352,6 +394,18 @@
         <breakpoint type="java-exception">
           <properties class="java.lang.NoSuchMethodError" package="java.lang" />
           <option name="timeStamp" value="63" />
+        </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="96" />
+        </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="102" />
+        </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="103" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0.jar!/jakarta/persistence/spi/PersistenceProviderResolverHolder.class</url>

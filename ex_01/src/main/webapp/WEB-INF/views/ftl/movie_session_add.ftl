@@ -9,7 +9,7 @@
             <input type="datetime-local" name="dateAndTime" id="dateInput"><br>
 
             <label for="movieIds">Movies:</label><br>
-            <select id="Movies" name="movieId">
+            <select id="Movies" name="movieTitle">
                 <#list movieListModelKey as movie>
                     <option value="${movie.title}">${movie.title}</option>
                 </#list>

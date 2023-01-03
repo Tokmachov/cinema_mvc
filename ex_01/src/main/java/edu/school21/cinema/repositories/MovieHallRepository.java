@@ -15,8 +15,8 @@ public class MovieHallRepository {
     @PersistenceContext
     private EntityManager em;
 
-    public void save(MovieHall movieHall) {
-        em.merge(movieHall);
+    public MovieHall save(MovieHall movieHall) {
+        return em.merge(movieHall);
     }
 
     public List<MovieHall> findAll() {

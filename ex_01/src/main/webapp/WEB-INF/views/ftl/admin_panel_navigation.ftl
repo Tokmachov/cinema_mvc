@@ -10,6 +10,7 @@
             <li><a href="${movieAddPathKey}">${addMovieTitleKey}</a></li>
             <li><a href="${sessionAddPathKey}">${sessionAddTitleKey}</a></li>
             <li><a href="${movieSessionListUrlKey}">${movieSessionListTitleKey}</a></li>
+            <li><a href="${movieSessionSearchPageUrlKey}">${movieSessionSearchPageTitleKey}</a></li>
         </ol>
     </body>
 </html>

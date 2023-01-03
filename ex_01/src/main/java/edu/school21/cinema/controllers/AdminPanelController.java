@@ -1,6 +1,8 @@
 package edu.school21.cinema.controllers;
 
+import edu.school21.cinema.controllers.dto.MovieSessionDetailsDto;
 import edu.school21.cinema.controllers.dto.MovieSessionDto;
+import edu.school21.cinema.controllers.dto.SearchMovieSessionDto;
 import edu.school21.cinema.controllers.mapper.MovieSessionMapper;
 import edu.school21.cinema.controllers.params.MovieSessionParams;
 import edu.school21.cinema.models.*;
@@ -10,6 +12,7 @@ import edu.school21.cinema.services.MovieService;
 import edu.school21.cinema.services.MovieSessionService;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,13 +23,15 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Controller
-@RequestMapping("/admin/panel")
+@RequestMapping(AdminPanelController.ADMIN_PANEL_BASE_URL)
 public class AdminPanelController {
+    public static final String ADMIN_PANEL_BASE_URL = "/admin/panel";
     private static String ADMIN_PANEL_NAVIGATION_VIEW_NAME = "admin_panel_navigation";
     public static String ADMIN_PANEL_NAVIGATION_URL = "/admin/panel";
     private static String ADMIN_PANEL_NAVIGATION_URL_KEY = "adminPanelNavigationPathKey";
@@ -64,7 +69,6 @@ public class AdminPanelController {
     private static String SESSION_ADD_VIEW_NAME = "movie_session_add";
     private static final String SESSION_ADD_PATH = "/admin/panel/sessions/add";
     private static final String SESSION_ADD_PATH_KEY = "sessionAddPathKey";
-
     private static String SESSION_ADD_TITLE = "Add session";
     private static String SESSION_ADD_TITLE_KEY = "sessionAddTitleKey";
 
@@ -73,7 +77,22 @@ public class AdminPanelController {
     private static String MOVIE_SESSION_LIST_TITLE = "Movie session list";
     private static String MOVIE_SESSION_LIST_TITLE_KEY = "movieSessionListTitleKey";
     private static String MOVIE_SESSION_LIST_URL_KEY = "movieSessionListUrlKey";
-    private static String MOVIE_SESSION_LIST_URL = "/admin/panel/sessions/";
+    private static String MOVIE_SESSION_LIST_URL = "/admin/panel/sessions";
+
+    private static String MOVIE_POSTER_BASE_URL = "/admin/panel/movies/poster";
+    private static String MOVIE_POSTER_BASE_URL_KEY = "moviePosterBaseUrlKey";
+
+    private static final String MOVIE_SESSION_SEARCH_PAGE_URL = "/admin/panel/sessions/search/page";
+    private static final String MOVIE_SESSION_SEARCH_PAGE_URL_KEY = "movieSessionSearchPageUrlKey";
+    private static String MOVIE_SESSION_SEARCH_PAGE_TITLE = "Search movie sessions";
+    private static String MOVIE_SESSION_SEARCH_PAGE_TITLE_KEY = "movieSessionSearchPageTitleKey";
+
+    private static final String SESSION_PAGE_VIEW_NAME = "session_page";
+    private static final String SESSION_PAGE_TITLE = "Session page";
+    private static final String SESSION_PAGE_TITLE_KEY = "sessionPageTitleKey";
+    private static final String SESSION_PAGE_BASE_URL = ADMIN_PANEL_BASE_URL + "/sessions";
+    private static final String SESSION_PAGE_BASE_URL_KEY = "sessionPageBaseUrlKey";
+    private static final String SESSION_MODEL_KEY = "sessionModelKey";
 
     private static String CONSTANTS_KEY = "constantsKey";
 
@@ -112,6 +131,8 @@ public class AdminPanelController {
         modelAndView.addObject(MOVIE_SESSION_LIST_TITLE_KEY, MOVIE_SESSION_LIST_TITLE);
         modelAndView.addObject(MOVIE_SESSION_LIST_URL_KEY, request.getContextPath() + MOVIE_SESSION_LIST_URL);
 
+        modelAndView.addObject(MOVIE_SESSION_SEARCH_PAGE_TITLE_KEY, MOVIE_SESSION_SEARCH_PAGE_TITLE);
+        modelAndView.addObject(MOVIE_SESSION_SEARCH_PAGE_URL_KEY, request.getContextPath() + MOVIE_SESSION_SEARCH_PAGE_URL);
         return modelAndView;
     }
 
@@ -143,7 +164,7 @@ public class AdminPanelController {
     @PostMapping("/halls/add")
     public RedirectView addHall(@ModelAttribute MovieHall movieHall, HttpServletRequest request) {
         throwIfNotValid(movieHall);
-        movieHallService.add(movieHall);
+        movieHallService.save(movieHall);
         return new RedirectView(request.getContextPath() + MOVIE_HALL_ADD_PATH_VALUE);
     }
 
@@ -177,6 +198,7 @@ public class AdminPanelController {
         modelAndView.addObject(POSTER_PATH_KEY, movieService.getPosterPath());
         modelAndView.addObject(ADMIN_PANEL_NAVIGATION_URL_KEY, request.getContextPath() + ADMIN_PANEL_NAVIGATION_URL);
         modelAndView.addObject(BACK_TO_ADMIN_PANEL_MSG_KEY, BACK_TO_ADMIN_PANEL_MSG);
+        modelAndView.addObject(MOVIE_POSTER_BASE_URL_KEY, request.getContextPath() + MOVIE_POSTER_BASE_URL);
         return modelAndView;
     }
 
@@ -227,7 +249,7 @@ public class AdminPanelController {
         List<MovieSession> movieSessionList = movieSessionService.findAll();
         List<MovieSessionDto> movieSessionDtoList = movieSessionList
                 .stream()
-                .map(MovieSessionMapper::toDto)
+                .map(MovieSessionMapper::toMovieSessionDto)
                 .collect(Collectors.toList());
 
         ModelAndView modelAndView = new ModelAndView();
@@ -243,6 +265,41 @@ public class AdminPanelController {
     public RedirectView deleteMovieSessions(@RequestParam(required = false, defaultValue = "") List<Long> movieSessionIdList, HttpServletRequest request) {
         movieSessionService.deleteByIds(movieSessionIdList);
         return new RedirectView(request.getContextPath() + MOVIE_SESSION_LIST_URL);
+    }
+
+    @GetMapping("/sessions/search/page")
+    public ModelAndView displaySessionSearchView(HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView("movie_session_search");
+        modelAndView.addObject(MOVIE_POSTER_BASE_URL_KEY, request.getContextPath() + MOVIE_POSTER_BASE_URL);
+        modelAndView.addObject(SESSION_PAGE_BASE_URL_KEY, request.getContextPath() + SESSION_PAGE_BASE_URL);
+        modelAndView.addObject(ADMIN_PANEL_NAVIGATION_URL_KEY, request.getContextPath() +  ADMIN_PANEL_NAVIGATION_URL);
+        modelAndView.addObject(BACK_TO_ADMIN_PANEL_MSG_KEY,BACK_TO_ADMIN_PANEL_MSG);
+        return modelAndView;
+
+    }
+
+    @ResponseBody
+    @GetMapping(value = "/sessions/search", produces= MediaType.APPLICATION_JSON_VALUE)
+    public List<SearchMovieSessionDto> searchMovieSessions(@RequestParam String query) {
+        if (StringUtils.isEmpty(query)) {
+            return Collections.EMPTY_LIST;
+        }
+        return movieSessionService.findMovieByTitleLike(query)
+                .stream()
+                .map(MovieSessionMapper::toSearchSessionDto)
+                .collect(Collectors.toList());
+    }
+
+    @GetMapping("/sessions/{sessionId}")
+    public ModelAndView showSessionPage(@PathVariable String sessionId, HttpServletRequest request) {
+        MovieSessionDetailsDto movieSessionDetailsDto = MovieSessionMapper.toMovieSessionDetailsDto(movieSessionService.findById(Long.parseLong(sessionId)));
+        ModelAndView modelAndView = new ModelAndView(SESSION_PAGE_VIEW_NAME);
+        modelAndView.addObject(SESSION_PAGE_TITLE_KEY, SESSION_PAGE_TITLE);
+        modelAndView.addObject(SESSION_MODEL_KEY, movieSessionDetailsDto);
+        modelAndView.addObject(MOVIE_POSTER_BASE_URL_KEY, request.getContextPath() + MOVIE_POSTER_BASE_URL);
+        modelAndView.addObject(BACK_TO_ADMIN_PANEL_MSG_KEY, BACK_TO_ADMIN_PANEL_MSG);
+        modelAndView.addObject(ADMIN_PANEL_NAVIGATION_URL_KEY, request.getContextPath() +  ADMIN_PANEL_NAVIGATION_URL);
+        return modelAndView;
     }
 
     @ExceptionHandler(Exception.class)

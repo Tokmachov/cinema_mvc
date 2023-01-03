@@ -27,7 +27,7 @@ public class MovieSessionService {
     }
 
     public void saveMovieSession(MovieSessionParams movieSessionParams) {
-        Movie movie = movieRepository.findById(movieSessionParams.getMovieId());
+        Movie movie = movieRepository.findByTitle(movieSessionParams.getMovieTitle());
         MovieHall movieHall = movieHallRepository.findById(movieSessionParams.getMovieHallId());
 
         LocalDateTime localDateTime = LocalDateTime.parse(movieSessionParams.getDateAndTime());
@@ -43,5 +43,13 @@ public class MovieSessionService {
 
     public void deleteByIds(List<Long> idList) {
         movieSessionRepository.deleteByIds(idList);
+    }
+
+    public List<MovieSession> findMovieByTitleLike(String query) {
+        return movieSessionRepository.findByMovieTitleLike(query);
+    }
+
+    public MovieSession findById(long id) {
+        return movieSessionRepository.findById(id);
     }
 }
