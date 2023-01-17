@@ -32,3 +32,26 @@
 8. When app is no longer needed run shutdown script with 1 parameter: tomcat dir<br>
   &emsp;./shutdown_cinema.sh /tomcat_dir<br>
 </details>
+<details>
+  <summary>Functionality</summary>
+ This app is for cinema management.<br>
+ It has administator functionality and movie visitor functionality that is accessible from a starting page: localhost:8080/cinema/
+ This functionality includes:
+  1. Display/adding of movies
+  2. Display/adding of movie sessions
+  3. Dynamic search of movie sessions by movie name. After typing in some letters tiles with movies appear.
+  4. You can click on movie in the list of movies to display movie chat. In the chat you are authenticated by name that is kept in cookes of your browser.
+  5. You can launch another type of browser or same browser in incognito mode, log into chat with another name and simulate chat conversation from two browsers. To browsers must display the page of the same movie.
+</details>
+<details>
+  <summary>Stack</summary>
+  Java
+  Spring
+  Spting MVC
+  Jpa with Hibernate
+  Web sockets over STOMP
+  Java Script, jquery
+  html
+  css
+  freemaker
+</details>
