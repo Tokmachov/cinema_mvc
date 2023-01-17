@@ -1,5 +1,7 @@
 
-1. Install maven<br>
+<details>
+  <summary>Deployment</summary>
+  1. Install maven<br>
 <br>
 2. Download tamcat<br>
    &emsp;curl http://archive.apache.org/dist/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.zip --output tomcat.zip<br>
@@ -29,3 +31,27 @@
 <br>
 8. When app is no longer needed run shutdown script with 1 parameter: tomcat dir<br>
   &emsp;./shutdown_cinema.sh /tomcat_dir<br>
+</details>
+<details>
+  <summary>Functionality</summary>
+ This app is for cinema management.<br>
+ It has administator functionality and movie visitor functionality that is accessible from a starting page: localhost:8080/cinema/<br>
+ This functionality includes:<br>
+  1. Display/adding of movies<br>
+  2. Display/adding of movie sessions<br>
+  3. Dynamic search of movie sessions by movie name. After typing in some letters tiles with movies appear.<br>
+  4. You can click on movie in the list of movies to display movie chat. In the chat you are authenticated by name that is kept in cookes of your browser.<br>
+  5. You can launch another type of browser or same browser in incognito mode, log into chat with another name and simulate chat conversation from two browsers. To browsers must display the page of the same movie.<br>
+</details>
+<details>
+  <summary>Stack</summary>
+  Java<br>
+  Spring<br>
+  Spting MVC<br>
+  Jpa with Hibernate<br>
+  Web sockets over STOMP<br>
+  Java Script, jquery<br>
+  html<br>
+  css<br>
+  freemaker<br>
+</details>
