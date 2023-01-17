@@ -10,7 +10,7 @@ import org.apache.commons.lang3.tuple.Pair;
 public class MovieSessionMapper {
     public static MovieSessionDto toMovieSessionDto(MovieSession movieSession) {
         Pair<String, String> dateAndTime = TimeUtils.toDateAndTime(movieSession.getTimeStart());
-        return new MovieSessionDto(movieSession.getId(), dateAndTime.getLeft(), dateAndTime.getRight(), movieSession.getMovie().getTitle(), movieSession.getMovieHall().getId());
+        return new MovieSessionDto(movieSession.getId(), dateAndTime.getLeft(), dateAndTime.getRight(), movieSession.getMovie().getTitle(), movieSession.getMovieHall().getId(), movieSession.getPrice());
     }
 
     public static SearchMovieSessionDto toSearchSessionDto(MovieSession movieSession) {

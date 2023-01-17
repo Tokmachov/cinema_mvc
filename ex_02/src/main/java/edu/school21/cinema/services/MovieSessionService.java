@@ -33,7 +33,7 @@ public class MovieSessionService {
         LocalDateTime localDateTime = LocalDateTime.parse(movieSessionParams.getDateAndTime());
         ZoneId zoneId = ZoneId.systemDefault();
         long timeStart = localDateTime.atZone(zoneId).toInstant().toEpochMilli();
-        MovieSession movieSession = new MovieSession(timeStart, movie, movieHall);
+        MovieSession movieSession = new MovieSession(timeStart, movie, movieSessionParams.getPrice(), movieHall);
         movieSessionRepository.save(movieSession);
     }
 

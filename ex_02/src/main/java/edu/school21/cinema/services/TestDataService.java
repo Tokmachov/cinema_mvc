@@ -43,9 +43,9 @@ public class TestDataService {
                 List<Movie> movieList = createTestMovies();
                 MovieHall movieHall = createTestMovieHall();
                 for (Movie movie : movieList) {
-                    movieSessionService.saveMovieSession(new MovieSessionParams("2022-12-29T11:19", movieHall.getId(), movie.getTitle()));
-                    movieSessionService.saveMovieSession(new MovieSessionParams("2022-12-29T12:19", movieHall.getId(), movie.getTitle()));
-                    movieSessionService.saveMovieSession(new MovieSessionParams("2022-12-29T13:19", movieHall.getId(), movie.getTitle()));
+                    movieSessionService.saveMovieSession(new MovieSessionParams("2022-12-29T11:19", movieHall.getId(), movie.getTitle(), 10));
+                    movieSessionService.saveMovieSession(new MovieSessionParams("2022-12-29T12:19", movieHall.getId(), movie.getTitle(), 10));
+                    movieSessionService.saveMovieSession(new MovieSessionParams("2022-12-29T13:19", movieHall.getId(), movie.getTitle(), 10));
                 }
             } catch (Exception ex) {
                 System.err.println(ex.getMessage());

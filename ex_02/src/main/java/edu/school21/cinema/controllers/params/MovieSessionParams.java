@@ -13,4 +13,5 @@ public class MovieSessionParams {
     private String dateAndTime;
     private String movieHallId;
     private String movieTitle;
+    private int price;
 }

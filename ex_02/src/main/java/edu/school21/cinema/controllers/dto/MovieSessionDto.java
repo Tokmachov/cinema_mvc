@@ -11,4 +11,5 @@ public class MovieSessionDto {
     private String time;
     private String movieTitle;
     private String movieHallName;
+    private int price;
 }
