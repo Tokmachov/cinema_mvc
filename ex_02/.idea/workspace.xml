@@ -10,37 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c08233a-c4f8-4f56-8f1b-0b40ba84bbd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/WebSocketsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AddressUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/MovieChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/MovieChatMessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/UserAuthenticationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/UserPictureDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/UserProfileDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/MovieChatMessageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/UserAuthenticationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/utils/DirectoryUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/filters/UserLoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/MovieChatMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/UserAuthentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/UserPicture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieChatMessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/PictureRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/UserAuthenticationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieChatMessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/PictureService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/UserAuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sockjs-0.3.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stomp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/login_page.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_chat.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/websocket.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ex_01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex_01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/websocket.ftl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +228,7 @@
       <workItem from="1672328721743" duration="223000" />
       <workItem from="1672330099910" duration="39125000" />
       <workItem from="1672738978277" duration="4260000" />
-      <workItem from="1672745606729" duration="130423000" />
+      <workItem from="1672745606729" duration="130948000" />
     </task>
     <servers />
   </component>

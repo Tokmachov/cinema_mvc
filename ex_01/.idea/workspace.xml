@@ -9,45 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c08233a-c4f8-4f56-8f1b-0b40ba84bbd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/MovieSessionDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/dto/SearchMovieSessionDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/TestDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Main in the moon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man in iron mask" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man in love" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man of god" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Man of steel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Men in black" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test_posters/Moonrise kingdom" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/css/movie_session_search.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/js/movie_session_search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_search.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/session_page.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/ApplicationContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/ApplicationContextConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/PersistenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/PersistenceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/WebAppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/config/WebAppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/AdminPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/DefaultPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/DefaultPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/MovieSessionSearchController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/MovieSessionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/mapper/MovieSessionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/params/MovieSessionParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/controllers/params/MovieSessionParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieHallRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieHallRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieSessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/repositories/MovieSessionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieHallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieHallService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieSessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/school21/cinema/services/MovieSessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cinema.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cinema.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/admin_panel_navigation.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/admin_panel_navigation.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_list.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ftl/movie_session_add.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/html/movie_session_search.html" beforeDir="false" />
-    </list>
+    <list default="true" id="2c08233a-c4f8-4f56-8f1b-0b40ba84bbd6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -254,7 +216,7 @@
       <workItem from="1672229403127" duration="6430000" />
       <workItem from="1672253979623" duration="15786000" />
       <workItem from="1672328721743" duration="223000" />
-      <workItem from="1672330099910" duration="39125000" />
+      <workItem from="1672330099910" duration="39620000" />
     </task>
     <servers />
   </component>
