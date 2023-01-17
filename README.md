@@ -35,8 +35,8 @@
 <details>
   <summary>Functionality</summary>
  This app is for cinema management.<br>
- It has administator functionality and movie visitor functionality that is accessible from a starting page: localhost:8080/cinema/
- This functionality includes:
+ It has administator functionality and movie visitor functionality that is accessible from a starting page: localhost:8080/cinema/<br>
+ This functionality includes:<br>
   1. Display/adding of movies<br>
   2. Display/adding of movie sessions<br>
   3. Dynamic search of movie sessions by movie name. After typing in some letters tiles with movies appear.<br>
