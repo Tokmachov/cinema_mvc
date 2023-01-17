@@ -1,5 +1,7 @@
 
-1. Install maven<br>
+<details>
+  <summary>Deployment</summary>
+  1. Install maven<br>
 <br>
 2. Download tamcat<br>
    &emsp;curl http://archive.apache.org/dist/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.zip --output tomcat.zip<br>
@@ -29,3 +31,4 @@
 <br>
 8. When app is no longer needed run shutdown script with 1 parameter: tomcat dir<br>
   &emsp;./shutdown_cinema.sh /tomcat_dir<br>
+</details>
